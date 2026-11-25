@@ -1,6 +1,6 @@
 # Rough Neural Ordinary Differential Equations
 
-This repository contains the code used for experiments in the paper submitted to ESANN 2027.
+This repository contains the code used for experiments in the paper submitted to the 35th European Symposium on Artificial Neural Networks (ESANN 2027).
 
 Gabriel Kiciński<sup>1</sup>, Piotr Bogusław Mucha<sup>1</sup>, Jacek Cyranka<sup>2</sup>
 
