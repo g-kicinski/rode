@@ -1,0 +1,28 @@
+experiment:
+  exp_id: cnn_11003
+  out_file: runs/cnn/training_results.jsonl
+  seed: 11003
+  deterministic: true
+
+training:
+  batch_size: 128
+  epochs: 60
+  lr: 0.001
+  weight_decay: 5e-4
+  checkpoint: runs/cnn/best_model
+  scheduling: false
+
+model:
+  field_epsilon: 0.01
+  num_features: 64
+  use_cnn_only: true
+  num_classes: 10
+  odeint_step_size: 0.05
+  use_linear_1: false
+  linear_1_size: 64
+  use_ripping_field: true
+  augmented: true
+  augmented_by_zeros: false
+  div_free_field: simple
+  div_free_field_hidden_size: 128
+  div_free5_num_non_zero: 10

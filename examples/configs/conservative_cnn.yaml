@@ -1,0 +1,33 @@
+experiment:
+  exp_id: conservative_cnn_seed_1337
+  out_file: runs/conservative_cnn/training_results.jsonl
+  seed: 1337
+  deterministic: true
+
+training:
+  batch_size: 128
+  epochs: 60
+  lr: 0.001
+  weight_decay: 5e-4
+  checkpoint: runs/conservative_cnn/best_model
+  scheduling: false
+
+model:
+  field_epsilon: 0.01
+  num_features: 64
+  use_cnn_only: true
+  num_classes: 10
+  odeint_step_size: 0.05
+  use_linear_1: false
+  linear_1_size: 64
+  use_ripping_field: true
+  augmented: true
+  augmented_by_zeros: false
+  div_free_field: simple
+  div_free_field_hidden_size: 128
+  div_free5_num_non_zero: 10
+  cnn_spectral_normalization: true
+  cnn_spectral_bounds: [1.2, 1.5, 2.0, 2.0, 2.0]
+  classifier_spectral_normalization: true
+  classifier_spectral_bound: 2.0
+  spectral_norm_power_iterations: 3

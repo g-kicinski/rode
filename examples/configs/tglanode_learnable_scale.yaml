@@ -1,0 +1,42 @@
+experiment:
+  exp_id: tglanode_learnable_scale_8009
+  out_file: runs/tglanode_learnable_scale/training_results.jsonl
+  seed: 8009
+  deterministic: true
+
+training:
+  batch_size: 128
+  epochs: 60
+  lr: 0.001
+  weight_decay: 5e-4
+  checkpoint: runs/tglanode_learnable_scale/best_model
+  scheduling: false
+
+model:
+  field_epsilon: 0.01
+  num_features: 64
+  use_cnn_only: false
+  num_classes: 10
+  odeint_step_size: 0.05
+  use_linear_1: false
+  linear_1_size: 64
+  use_ripping_field: true
+  augmented: true
+  augmented_by_zeros: false
+  div_free_field: node
+  div_free_field_hidden_size: 128
+  div_free5_num_non_zero: 10
+  div_free_simple_hidden_size: 64
+  div_free_simple_activation: relu
+  div_free_simple_leaky_relu_slope: 0.1
+  div_free_simple_softplus_beta: 5.0
+  div_free_simple_num_hidden_layers: 1
+  div_free_simple_learnable_mixing: false
+  div_free_simple_learnable_scale: false
+  div_free_simple_initial_scale: 0.01
+  node_hidden_size: 64
+  node_activation: tanh
+  node_leaky_relu_slope: 0.1
+  node_softplus_beta: 5.0
+  node_learnable_scale: true
+  node_initial_scale: 1.3

@@ -1,0 +1,28 @@
+experiment:
+  exp_id: cnn_7001
+  out_file: runs/anode/training_results.jsonl
+  seed: 7001
+  deterministic: true
+
+training:
+  batch_size: 128
+  epochs: 60
+  lr: 0.001
+  weight_decay: 5e-4
+  checkpoint: runs/anode/best_model
+  scheduling: false
+
+model:
+  field_epsilon: 0.01
+  num_features: 64
+  use_cnn_only: false
+  num_classes: 10
+  odeint_step_size: 0.05
+  use_linear_1: false
+  linear_1_size: 64
+  use_ripping_field: false
+  augmented: true
+  augmented_by_zeros: true
+  div_free_field: node
+  div_free_field_hidden_size: 128
+  div_free5_num_non_zero: 10

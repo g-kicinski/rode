@@ -1,0 +1,43 @@
+experiment:
+  exp_id: spectral_divfree_seed_1337
+  out_file: runs/spectral_divfree/training_results.jsonl
+  seed: 1337
+  deterministic: true
+
+training:
+  batch_size: 128
+  epochs: 60
+  lr: 0.001
+  weight_decay: 5e-4
+  checkpoint: runs/spectral_divfree/best_model
+  scheduling: false
+
+model:
+  field_epsilon: 0.01
+  num_features: 64
+  use_cnn_only: false
+  num_classes: 10
+  odeint_step_size: 0.05
+  use_linear_1: false
+  linear_1_size: 64
+  use_ripping_field: true
+  augmented: true
+  augmented_by_zeros: false
+  div_free_field: simple_multi
+  div_free_field_hidden_size: 128
+  div_free5_num_non_zero: 10
+  div_free_simple_hidden_size: 64
+  div_free_simple_activation: leaky_relu
+  div_free_simple_leaky_relu_slope: 0.1
+  div_free_simple_softplus_beta: 5.0
+  div_free_simple_num_hidden_layers: 1
+  div_free_simple_learnable_mixing: false
+  div_free_simple_normalize_mixing: true
+  div_free_simple_learnable_scale: false
+  div_free_simple_initial_scale: 7.505553499465135
+  div_free_multi_num_potentials: 3
+  cnn_spectral_normalization: true
+  cnn_spectral_bounds: [1.2, 1.5, 2.0, 2.0, 2.0]
+  classifier_spectral_normalization: true
+  classifier_spectral_bound: 2.0
+  spectral_norm_power_iterations: 3
